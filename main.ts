@@ -4,11 +4,13 @@ const { join } = require('node:path');
 
 const CANDIDATES = [
   `I finally fixed the office printer. Its first job was printing my layoff notice.`,
-  `I fixed the office printer once. HR now lists me as its emergency contact.`,
+  `Our office went paperless. Now we shred morale.`,
 ];
 
 function pickBest() {
-  return CANDIDATES[0];
+  return CANDIDATES.reduce((best, candidate) => {
+    return candidate.length < best.length ? candidate : best;
+  });
 }
 
 const joke = pickBest();
