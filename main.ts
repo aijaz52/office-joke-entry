@@ -1,7 +1,7 @@
 const { mkdir, writeFile } = require('node:fs/promises');
 const { join } = require('node:path');
 
-const joke = `I fixed the office printer once. HR now lists me as its emergency contact.`;
+const joke = `I finally fixed the office printer. Its first job was printing my layoff notice.`;
 const outputDirectory = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 
 async function main() {
