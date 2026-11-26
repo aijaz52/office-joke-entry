@@ -8,9 +8,8 @@ const CANDIDATES = [
 ];
 
 function pickBest() {
-  return CANDIDATES.reduce((best, candidate) => {
-    return candidate.length < best.length ? candidate : best;
-  });
+  // Fixing the printer enables the narrator's own layoff: the strongest turn.
+  return CANDIDATES[0];
 }
 
 const joke = pickBest();
