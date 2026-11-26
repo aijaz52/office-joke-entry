@@ -1,7 +1,17 @@
+// Select an office joke and write it to entry.txt.
 const { mkdir, writeFile } = require('node:fs/promises');
 const { join } = require('node:path');
 
-const joke = `I finally fixed the office printer. Its first job was printing my layoff notice.`;
+const CANDIDATES = [
+  `I finally fixed the office printer. Its first job was printing my layoff notice.`,
+  `I fixed the office printer once. HR now lists me as its emergency contact.`,
+];
+
+function pickBest() {
+  return CANDIDATES[0];
+}
+
+const joke = pickBest();
 const outputDirectory = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 
 async function main() {
